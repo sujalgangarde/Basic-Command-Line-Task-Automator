@@ -26,8 +26,8 @@ This project is a simple Python-based command-line tool that automates various s
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd <repository_name>
+   git clone https://github.com/sujalgangarde/Basic-Command-Line-Task-Automator
+   cd https://github.com/sujalgangarde/Basic-Command-Line-Task-Automator
    ```
 
 2. Install the required dependencies:
