@@ -1,0 +1,56 @@
+# Step 1: Install WSL on Windows (if not already installed)
+# Open PowerShell as Administrator and run the following command:
+wsl --install
+
+# Step 2: Set Up Ubuntu (or another distro) in WSL
+# After installing WSL, set up your preferred Linux distro (e.g., Ubuntu) from the Microsoft Store.
+# Follow the on-screen instructions to complete the installation.
+
+# Step 3: Open WSL Terminal
+# Open your WSL terminal (Ubuntu or other distro) from the Start Menu.
+
+# Step 4: Update the WSL package list and install necessary packages
+sudo apt update
+
+# Step 5: Install Python3 if not already installed
+sudo apt install python3 -y
+
+# Step 6: Install pip3 if not already installed
+sudo apt install python3-pip -y
+
+# Step 7: Install Python's virtual environment module (optional but recommended)
+sudo apt install python3-venv -y
+
+# Step 8: Create a Virtual Environment
+python3 -m venv automator-env
+
+# Step 9: Activate the Virtual Environment
+source automator-env/bin/activate
+
+# Step 10: Install the required Python package 'psutil' inside the virtual environment
+pip install psutil
+
+# Step 11: Save the Python script (task_automator.py) into the current directory
+# Create and open the file using nano editor
+nano task_automator.py
+
+# Paste the Python code inside the nano editor, save, and exit (Ctrl + O to save, Ctrl + X to exit)
+
+# Step 12: Run the Python script with arguments
+# Example: List processes
+python3 task_automator.py --list
+
+# Example: Kill a process with PID 1234
+python3 task_automator.py --kill 1234
+
+# Example: Show CPU and RAM usage
+python3 task_automator.py --info
+
+# Example: Clean cache (Linux only)
+python3 task_automator.py --clean
+
+# Step 13: Deactivate the Virtual Environment after running the script
+deactivate
+
+# Optional Step: Exit WSL Terminal
+exit
